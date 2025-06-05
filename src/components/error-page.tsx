@@ -5,7 +5,10 @@ export const ErrorPage = () => {
   console.error(error);
 
   return (
-    <div id="error-page">
+    <div
+      className="fixed inset-0 flex flex-col items-center justify-center text-xl"
+      id="error-page"
+    >
       <h1>Oops!</h1>
       <p>Sorry, an unexpected error has occurred.</p>
       <p>
