@@ -41,7 +41,7 @@ export const storeSlice = createSlice({
     },
     setToken(state, action: PayloadAction<string>) {
       state.token = action.payload;
-      Cookies.set("token", action.payload, { expires: 30 });
+      Cookies.set("tokenStore", action.payload, { expires: 30 });
     },
   },
 });

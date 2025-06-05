@@ -15,5 +15,5 @@ export const initialState: StoreState = {
   cart: [],
   userName: "",
   password: "",
-  token: Cookies.get("token") || "",
+  token: Cookies.get("tokenStore") || "",
 };
