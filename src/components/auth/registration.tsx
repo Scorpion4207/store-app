@@ -44,7 +44,7 @@ export const Registration = () => {
 
   return (
     <div className="fixed inset-0 z-99 flex items-center justify-center backdrop-blur-xs">
-      <div className="relative rounded-xl border-2 p-4 shadow-xl">
+      <div className="relative rounded-xl border-2 bg-white p-4 shadow-xl dark:bg-[#2a2a2a]">
         <h2 className="mb-4 text-center text-3xl">Регистрация</h2>
         <form
           onSubmit={handleSubmit(onSubmit)}
