@@ -1,10 +1,16 @@
 import { useState } from "react";
+import { useAppDispatch } from "../../app/hooks";
+import { useSelectHook, setDarkMode } from "../../features/store/slice";
 
 export const ThemeSwitcher = () => {
-  const [isChecked, setIsChecked] = useState(false);
+  const { selectDarkMode } = useSelectHook();
+  const [isChecked, setIsChecked] = useState(selectDarkMode === "dark");
+
+  const dispatch = useAppDispatch();
 
   const onChange = () => {
     setIsChecked(!isChecked);
+    dispatch(setDarkMode(!isChecked));
     document.documentElement.classList.toggle("dark");
   };
 

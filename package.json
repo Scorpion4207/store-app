@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.14.0",
     "@reduxjs/toolkit": "^2.8.1",
     "@tailwindcss/vite": "^4.1.6",
+    "js-cookie": "^3.0.5",
     "plural-ru": "^2.0.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
+    "@types/js-cookie": "^3.0.6",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@typescript-eslint/eslint-plugin": "^8.32.1",

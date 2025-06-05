@@ -26,17 +26,15 @@ export const router = createBrowserRouter(
           path: "details/:id",
           element: <ProductDetails />,
         },
+        {
+          path: "/authorization",
+          element: <Authorization />,
+        },
+        {
+          path: "/registration",
+          element: <Registration />,
+        },
       ],
-    },
-    {
-      path: "/authorization",
-      element: <Authorization />,
-      errorElement: <ErrorPage />,
-    },
-    {
-      path: "/registration",
-      element: <Registration />,
-      errorElement: <ErrorPage />,
     },
   ],
   {

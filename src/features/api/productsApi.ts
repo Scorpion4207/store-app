@@ -1,6 +1,6 @@
 import { apiSlice } from "./api.ts";
 
-interface Product {
+export interface Product {
   id: number;
   title: string;
   price: number;
@@ -9,13 +9,17 @@ interface Product {
   image: string;
 }
 
-export const productsApi = apiSlice.injectEndpoints({
+const productsApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getProducts: builder.query<Product[], void>({
       query: () => "products",
       providesTags: ["Product"],
     }),
+    getProduct: builder.query<Product, string>({
+      query: (id) => `products/${id}`,
+      providesTags: ["Product"],
+    }),
   }),
 });
 
-export const { useGetProductsQuery } = productsApi;
+export const { useGetProductsQuery, useGetProductQuery } = productsApi;

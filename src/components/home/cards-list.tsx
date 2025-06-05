@@ -7,10 +7,14 @@ export const CardsList = () => {
   let content: React.ReactNode;
 
   if (isLoading) {
-    content = "Loading...";
+    content = (
+      <div className="fixed inset-0 flex items-center justify-center">
+        <p className="animate-spin rounded-full border-3 border-orange-400 border-t-white p-5 dark:border-[#1DB954] dark:border-t-[#2a2a2a]"></p>
+      </div>
+    );
   } else if (isSuccess) {
     content = (
-      <ul className="flex flex-wrap justify-center gap-4">
+      <ul className="@container flex flex-wrap justify-center gap-2">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
